@@ -8,7 +8,7 @@ export function Footer({ year }: { year: number }) {
         <div>
           <Link href="/" className="flex items-center gap-2 mb-4" aria-label="LinuxCustom Home">
             <Terminal className="h-8 w-8 text-primary" />
-            <span className="text-2xl font-bold font-headline text-primary">LinuxCustom</span>
+            <span className="text-2xl font-bold font-headline text-primary">Vincre</span>
           </Link>
           <p className="text-sm max-w-xs">The ultimate destination for Linux enthusiasts seeking customization resources and AI tools.</p>
         </div>

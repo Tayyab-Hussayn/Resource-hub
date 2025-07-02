@@ -7,7 +7,7 @@ import Link from "next/link";
 import { Github, Twitter, Linkedin } from "lucide-react";
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
+import author from '../../assets/author.jpg'; // adjust the path as needed
 gsap.registerPlugin(ScrollTrigger);
 
 export function AuthorIntro() {
@@ -44,8 +44,8 @@ export function AuthorIntro() {
         <CardHeader>
           <div className="flex flex-col md:flex-row items-center gap-8 p-4">
             <Avatar className="h-40 w-40 border-4 border-primary">
-              <AvatarImage src="https://placehold.co/160x160.png" alt="Author's Picture" data-ai-hint="profile picture" />
-              <AvatarFallback>AU</AvatarFallback>
+              <AvatarImage src={author.src} alt="Author's Picture" data-ai-hint="profile picture" />
+               
             </Avatar>
             <div className="text-center md:text-left">
               <CardTitle className="font-headline text-3xl text-primary">About the Creator</CardTitle>
@@ -53,7 +53,7 @@ export function AuthorIntro() {
                 Hi, I'm the creator of this hub. As a passionate Linux user and developer, I wanted to build a central place for high-quality customization resources and innovative tools that I use in my daily workflow.
               </p>
               <div className="mt-4 flex justify-center md:justify-start gap-4">
-                <Link href="https://github.com/tayyabhussayn" target="_blank" rel="noopener noreferrer" aria-label="Github"><Github className="h-6 w-6 text-muted-foreground hover:text-primary transition-colors" /></Link>
+                <Link href="https://github.com/tayyab-hussayn" target="_blank" rel="noopener noreferrer" aria-label="Github"><Github className="h-6 w-6 text-muted-foreground hover:text-primary transition-colors" /></Link>
                 <Link href="#" aria-label="Twitter"><Twitter className="h-6 w-6 text-muted-foreground hover:text-primary transition-colors" /></Link>
                 <Link href="https://www.linkedin.com/in/tayyabhussayn" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><Linkedin className="h-6 w-6 text-muted-foreground hover:text-primary transition-colors" /></Link>
               </div>

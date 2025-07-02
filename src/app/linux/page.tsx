@@ -7,6 +7,12 @@ import { Button } from "@/components/ui/button";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Download, Cpu, Wallpaper, ShieldCheck, Terminal } from "lucide-react";
 
+// images from assets
+import sddm from '@/assets/sddm.png';
+import dotfiles from '@/assets/dotfiles.png';
+import grub from '@/assets/grub.png';
+import plymouth from '@/assets/plymouth.png';
+
 const resourceCategories = [
   { id: 'all', label: 'All Goodies', icon: <Terminal className="w-4 h-4 mr-2"/> },
   { id: 'dotfiles', label: 'Dotfiles', icon: <Cpu className="w-4 h-4 mr-2"/> },
@@ -21,7 +27,7 @@ const resources = [
     category: 'dotfiles',
     title: 'Project: GhostNet',
     description: 'A stealth-optimized Zsh & Neovim config for deep system infiltration. Minimalist, fast, and untraceable.',
-    thumbnail: 'https://placehold.co/600x400.png',
+    thumbnail: dotfiles.src,
     hint: 'hacker terminal code'
   },
   {
@@ -29,7 +35,7 @@ const resources = [
     category: 'grub',
     title: 'TRON-Legacy GRUB',
     description: 'Boot into the Grid with this animated Tron-themed GRUB loader. Features glowing light cycles and Recognizer art.',
-    thumbnail: 'https://placehold.co/600x400.png',
+    thumbnail: grub.src,
     hint: 'tron legacy grid'
   },
   {
@@ -37,7 +43,7 @@ const resources = [
     category: 'plymouth',
     title: 'SystemCore Boot',
     description: 'A clean, minimalist boot-up sequence showing kernel module loading with a futuristic progress bar.',
-    thumbnail: 'https://placehold.co/600x400.png',
+    thumbnail: plymouth.src,
     hint: 'futuristic loading screen'
   },
   {
@@ -45,7 +51,7 @@ const resources = [
     category: 'sddm',
     title: 'HoloLogin v2.1',
     description: 'A holographic login manager with glassmorphism effects and reactive particle animations. Secure and stylish.',
-    thumbnail: 'https://placehold.co/600x400.png',
+    thumbnail: sddm.src,
     hint: 'holographic ui'
   },
   {
@@ -121,7 +127,7 @@ const ResourceCard = ({ item }: { item: typeof resources[0] }) => (
         <div className="relative h-48 overflow-hidden">
              <div
                 style={{ backgroundImage: `url(${item.thumbnail})` }}
-                className="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-500 ease-in-out"
+                className="absolute inset-0 bg-contain bg-center group-hover:scale-110 transition-transform duration-500 ease-in-out"
                 data-ai-hint={item.hint}
                 aria-label={item.title}
             />
@@ -154,7 +160,7 @@ export default function LinuxPage() {
                      className="glitch-text relative inline-block font-headline text-5xl md:text-7xl font-bold text-foreground"
                      data-text="LINUX"
                    >
-                     LINUX
+                     RESOURCES
                    </h1>
                     <p className="text-muted-foreground mt-4 text-lg md:text-xl max-w-3xl mx-auto">
                         Access the arsenal. Download high-integrity configs, themes, and system mods.

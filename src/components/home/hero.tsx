@@ -37,9 +37,9 @@ function HeroSplineBackground() {
 }
 
 const headings = [
-  "All you need for your Linux experience",
+  "Thhings you need for your Linux experience",
   "Your complete Linux toolkit starts here",
-  "All you need for Linux mastery",
+  
 ];
 const typingSpeed = 50;
 const pauseDuration = 2000;
@@ -159,7 +159,7 @@ export function Hero() {
             className="group/button inline-block rounded-lg bg-gradient-to-r from-secondary via-primary to-accent p-1 text-lg shadow-lg shadow-primary/20 transition hover:shadow-xl hover:shadow-primary/30"
           >
             <span className="flex items-center justify-center rounded-md bg-background/90 px-8 py-3 text-foreground transition-colors group-hover/button:bg-background/80">
-              Explore Linux
+              Start Exploring
               <ArrowRight className="ml-2 h-5 w-5" />
             </span>
           </Link>

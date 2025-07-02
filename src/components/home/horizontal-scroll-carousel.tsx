@@ -2,7 +2,14 @@
 
 import { motion, useTransform, useScroll } from 'framer-motion';
 import { useRef } from 'react';
-
+import img1 from '@/assets/img1.webp';
+import img2 from '@/assets/img2.webp';
+import img3 from '@/assets/img3.webp';
+import img5 from '@/assets/img5.jpeg';
+import img7 from '@/assets/img7.webp';
+import img6 from '@/assets/img6.webp';
+import img8 from '@/assets/img8.webp';
+import img9 from '@/assets/img9.webp';
 const HorizontalScrollCarousel = () => {
   const targetRef = useRef<HTMLDivElement | null>(null);
   const { scrollYProgress } = useScroll({
@@ -54,11 +61,6 @@ const Card = ({ card }: CardProps) => {
         className="absolute inset-0 z-0 transition-transform duration-300 group-hover:scale-110"
         data-ai-hint={card.hint}
       />
-      <div className="absolute inset-0 z-10 grid place-content-center bg-black/40">
-        <p className="bg-gradient-to-br from-white/20 to-white/0 p-8 text-5xl font-black uppercase text-white backdrop-blur-md">
-          {card.title}
-        </p>
-      </div>
     </div>
   );
 };
@@ -66,44 +68,50 @@ const Card = ({ card }: CardProps) => {
 export default HorizontalScrollCarousel;
 
 const cards = [
-    {
-    url: 'https://placehold.co/600x600.png',
+  {
+    url: img1.src,
     title: 'Terminals',
     id: 1,
     hint: 'cyberpunk terminal'
   },
   {
-    url: 'https://placehold.co/600x600.png',
+    url: img2.src,
     title: 'Cityscapes',
     id: 2,
     hint: 'cyberpunk city'
   },
   {
-    url: 'https://placehold.co/600x600.png',
-    title: 'Circuits',
-    id: 3,
-    hint: 'glowing circuits'
-  },
-  {
-    url: 'https://placehold.co/600x600.png',
-    title: 'Neovim',
-    id: 4,
-    hint: 'neovim code'
-  },
-  {
-    url: 'https://placehold.co/600x600.png',
-    title: 'HUD',
-    id: 5,
-    hint: 'futuristic hud'
-  },
-  {
-    url: 'https://placehold.co/600x600.png',
+    url: img7.src,
     title: 'Abstract',
     id: 6,
     hint: 'abstract tech'
   },
   {
-    url: 'https://placehold.co/600x600.png',
+    url: img3.src,
+    title: 'Circuits',
+    id: 3,
+    hint: 'glowing circuits'
+  },
+  {
+    url: img5.src,
+    title: 'Neovim',
+    id: 4,
+    hint: 'neovim code'
+  },
+  {
+    url: img6.src,
+    title: 'HUD',
+    id: 5,
+    hint: 'futuristic hud'
+  },
+  {
+    url: img8.src,
+    title: 'Data Flow',
+    id: 7,
+    hint: 'data stream'
+  },
+  {
+    url: img9.src,
     title: 'Data Flow',
     id: 7,
     hint: 'data stream'
